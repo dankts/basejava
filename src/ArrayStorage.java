@@ -28,7 +28,7 @@ public class ArrayStorage {
 
     void delete(String uuid) {
         for (int i = 0; i < size() - 1; i++) {
-            if (storage[i].uuid == uuid) {
+            if (Objects.equals(storage[i].uuid, uuid)) {
                 storage[i] = null;
             }
         }
@@ -39,8 +39,7 @@ public class ArrayStorage {
      */
 
     Resume[] getAll() {
-        Resume[] resumesAvailable = Arrays.copyOf(storage, size());
-        return resumesAvailable;
+        return Arrays.copyOf(storage, size());
     }
 
     int size() {
