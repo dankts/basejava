@@ -37,6 +37,7 @@ public class ArrayStorage {
     /**
      * @return array, contains only Resumes in storage (without null)
      */
+
     Resume[] getAll() {
         Resume[] resumesAvailable = Arrays.copyOf(storage, size());
         return resumesAvailable;
